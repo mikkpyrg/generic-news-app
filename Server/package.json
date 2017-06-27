@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "The server to the news app",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm -v",
+    "start": "node ./bin/www"
+  },
+  "keywords": [
+    "server"
+  ],
+  "author": "Mikk Pürg",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "jsonwebtoken": "^7.3.0",
+    "pg-promise": "^5.6.4",
+    "pino": "^4.2.4",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0",
+    "striptags": "^3.0.1",
+    "swagger-jsdoc": "^1.9.2",
+    "xml2js": "^0.4.17"
+  }
+}

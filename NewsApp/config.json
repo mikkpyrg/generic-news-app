@@ -1,0 +1,40 @@
+{
+	"keys": {
+		"login": "@NewsApp:deepLinkLogin",
+		"selected": "@NewsApp:selectedData",
+		"lastUpdate": "@NewsApp:updateDate",
+		"providers": "@NewsApp:providers",
+		"providerToken": "@NewsApp:token:",
+		"bookmarks": "@NewsApp:bookmarks",
+		"articleList": "@NewsApp:articles",
+		"articleStore": "@NewsApp:articles:"
+	},
+	"text": {
+		"listview_noprovider": "Ühtegi uudiste toimetust pole valitud",
+		"settings": "Seadistused",
+		"badrequest": "Interneti ühendus puudub või ühendus serveriga katkes",
+		"tryagain": "Proovi uuesti",
+		"more": "Näita rohkem",
+		"lockedarticle": "Täispikkuse artikli lugemiseks on vaja tellida lugemisõigus",
+		"order": "telli",
+		"confirmation": "Kas oled kindel?",
+		"showImage": "Kas soovite kuvada pilte?",
+		"feed": "Uudiste lugemiseks valige mõni toimetus.",
+		"category": "Valige mõni temaatika.",
+		"bookmarkSyncTitle": "Kas soovite oma järjehoidjaid ühendada serveriga?",
+		"bookmarkSyncDesc": "Sul on mõningad järjehoidjad mälus. Kõik mis pole serveriga ühenduses lähevad järjehoidjate värskendamisel kaduma (rohelise värskendamise nupu vajutamisel).",
+		"yes": "Jah!",
+		"no": "Ei!",
+	},
+	"domain": "http://localhost:3000",
+	"endpoints": {
+		"news": "news/",
+		"bookmark": "bookmark/",
+		"batchBookmark": "bookmark/batch",
+		"providers": "config",
+		"logout": "logout",
+		"login": "login"
+
+	},
+	"articlebatchcount": 10
+}

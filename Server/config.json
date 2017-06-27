@@ -1,0 +1,173 @@
+{
+	"database": "postgres://postgres:xxxx@localhost:5432/news",
+	"appcallbackurl": "newsapp://login",
+	"tokenInvalidateInDays": 60,
+	"tokenExpire": "70d",
+	"tokenSecret": "asdfasety8491ah56as4ty8a94ags8t4654a1ry5686434d651hs5",
+	"saltRounds": 8,
+	"articleLimit": 10,
+	"providers": {
+		"ea": {
+			"Name": "Aripaev",
+			"loginType": "oAuth",
+			"Id": "1"
+		}
+	},
+	"errors": {
+		"invalidProvider": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/login.js, _checkProvider(), no such provider exists"
+			}
+		},
+		"invalidToken": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/login.js, validateToken(), token couldn't be verified"
+			}
+		},
+		"noTokenInDb": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/login.js, validateToken(), no token found in DB"
+			}
+		},
+		"oAuthCodeMissing": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/loginOauth.js, login(), no code parameter given"
+			}
+		},
+		"oAuthToken": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/loginOauth.js, _getToken(), request error"
+			}
+		},
+		"oAuthTokenResult": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/loginOauth.js, _getToken(), no token returned, wrong format or parse error"
+			}
+		},
+		"oAuthProfile": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/loginOauth.js, _getProfile(), request error"
+			}
+		},
+		"oAuthProfileResult": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/loginOauth.js, _getProfile(), no data returned, wrong format or parse error"
+			}
+		},
+		"oAuthPermissions": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/loginOauth.js, _getPermissions(), request error"
+			}
+		},
+		"oAuthPermissionsResult": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/loginOauth.js, _getPermissions(), no data returned, wrong format or parse error"
+			}
+		},
+		"oAuthTokenMissing": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/loginOauth.js, _reauthCheck(), no token parameter"
+			}
+		},
+		"oAuthDB": {
+			"error": {
+				"status": 500,
+				"title": "Server error",
+				"detail": "/services/loginOauth.js, login(), new user db save failed"
+			}
+		},
+		"oAuthReauthDB": {
+			"error": {
+				"status": 500,
+				"title": "Server error",
+				"detail": "/services/loginOauth.js, reauth(), update user db save failed"
+			}
+		},
+		"articleCron": {
+			"error": {
+				"status": 500,
+				"title": "Server error",
+				"detail": "/services/news.js, _getNews(), client script failed"
+			}
+		},
+		"adminlogin": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/admin.js, addNews(), wrong password"
+			}
+		},
+		"articleBatchUpload": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/admin.js, addNews(), batch upload failed"
+			}
+		},
+		"bookmarkParametersMissing": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/general.js, postBookmark(), parameters missing"
+			}
+		},
+		"bookmarkParametersMissingOnGet": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/general.js, getBookmarks(), parameters missing"
+			}
+		},
+		"bookmarkParametersMissingOnDelete": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/general.js, deleteBookmark(), parameters missing"
+			}
+		},
+		"newslistNoProvider": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/general.js, getNewslist(), no provider"
+			}
+		},
+		"newsNoArticleProvided": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/general.js, getNews(), no article id"
+			}
+		},
+		"newsNoToken": {
+			"error": {
+				"status": 400,
+				"title": "Bad Request",
+				"detail": "/services/general.js, getNews(), no token"
+			}
+		}
+
+	}
+}
